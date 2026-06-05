@@ -1,10 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ChunkingAndEmbedding.Services
+﻿namespace ChunkingAndEmbedding.Services
 {
-	internal class TokenizerService
+	public static class TokenizerService
 	{
+		public static void Run(string text)
+		{
+			Console.WriteLine();
+			Console.WriteLine("===========Tokenizer==========");
+
+			string[] Tokens = text.Split(' ',StringSplitOptions.RemoveEmptyEntries);
+
+			foreach(var Token in Tokens) 
+			{
+				Console.WriteLine(Token);
+			}
+		}
 	}
 }
